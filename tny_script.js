@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
@@ -6,14 +6,16 @@
    Tutorial Case
 
    Countdown Clock
-   Author: Emmanuel Cortes Castaneda
-   Date: 2.5.19
+   Author: Hector Sadler
+   Date:   2017-03-01
+
 */
 
-//Night
-/* Ramen Noodles
- The Wolf of Wall Street */
+/* Execute the function to run and display the countdown clock */
+runClock();
+setInterval("runClock()", 1000);
 
+/* Function to create and run the countdown clock */
 function runClock() {
     /* Store the current date and time */
     var currentDay = new Date();
@@ -25,7 +27,7 @@ function runClock() {
         dateStr + "<br />" + timeStr;
 
     /* Calculate the days until January 1st */
-    var newYear = new Date("January 1, 2020");
+    var newYear = new Date("January 1, 2018");
     var nextYear = currentDay.getFullYear() + 1;
     newYear.setFullYear(nextYear);
     var daysLeft = (newYear - currentDay) / (1000 * 60 * 60 * 24);
